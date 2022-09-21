@@ -9,7 +9,7 @@ signed main(){
   for(int i = 0; i < n; i++) {
     for(int j = 0; j < n; j++) p[i][j] = 0.0;
   }
-  for(int i = 1; i < n; i++) p[0][i] = 1.1;
+  for(int i = 1; i < n; i++) p[0][i] = 1.0;
   for(int i = 1; i < n; i++) {
     for(int j = 1; j < n; j++) {
       p[i][j] = ((double)i * (double)(11 - j) * p[i - 1][j] + (double)(11 - i) * (double)j * p[i][j - 1] + (double)i * (double)j * p[i - 1][j - 1]) / (121 - (double)(11 - i) * (double)(11 - j));
